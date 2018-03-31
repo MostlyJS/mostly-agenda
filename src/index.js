@@ -20,6 +20,3 @@ export default function (options) {
     app.agenda = agenda;
   };
 }
-
-
-
