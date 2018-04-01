@@ -1144,6 +1144,10 @@ eslint@^3.0.0:
     text-table "~0.2.0"
     user-home "^2.0.0"
 
+esm@^3.0.14:
+  version "3.0.14"
+  resolved "https://registry.npmjs.org/esm/-/esm-3.0.14.tgz#a9a79b7348c8708050ff42499b5ecbec019d08dc"
+
 espree@^3.4.0:
   version "3.5.4"
   resolved "https://registry.npmjs.org/espree/-/espree-3.5.4.tgz#b0f447187c8a8bed944b815a660bddf5deb5d1a7"
