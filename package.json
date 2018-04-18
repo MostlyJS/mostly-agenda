@@ -1,6 +1,6 @@
 {
   "name": "mostly-agenda",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Lightweight job scheduling for MostlyJS microservices using Agenda",
   "author": "Forafish",
   "license": "MIT",
