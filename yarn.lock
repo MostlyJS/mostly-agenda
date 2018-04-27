@@ -1848,7 +1848,7 @@ http-signature@~1.1.0:
     jsprim "^1.2.2"
     sshpk "^1.7.0"
 
-human-interval@~0.1.3:
+human-interval@^0.1.6, human-interval@~0.1.3:
   version "0.1.6"
   resolved "https://registry.npmjs.org/human-interval/-/human-interval-0.1.6.tgz#0057973454764c3abcbeb2aed612fc9644e68488"
 

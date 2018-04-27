@@ -26,7 +26,8 @@
   "dependencies": {
     "agenda": "^1.0.3",
     "debug": "^2.6.6",
-    "esm": "^3.0.14"
+    "esm": "^3.0.14",
+    "human-interval": "^0.1.6"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
