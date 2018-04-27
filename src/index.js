@@ -11,7 +11,8 @@ const defaultOptions = {
       }
     }
   },
-  cleanAfter: '1 week'
+  cleanAfter: '1 week',
+  cleanChance: 0.1
 };
 
 export default function (options) {
@@ -19,11 +20,13 @@ export default function (options) {
   const agenda = new Agenda(options);
   agenda.on('ready', agenda.start);
   agenda.on('complete', job => {
-    // remove finished jobs for a time
-    const cleanDate = new Date(Date.now() - humanInterval(options.cleanAfter));
-    agenda.cancel({ nextRunAt: null, lastFinishedAt: { $lte: cleanDate } }, (err) => {
-      if (err) console.error('Failed to clean finished agenda jobs:', err);
-    });
+    // remove old finished jobs sometimes
+    if (Math.random() <= options.cleanChance) {
+      const cleanDate = new Date(Date.now() - humanInterval(options.cleanAfter));
+      agenda.cancel({ nextRunAt: null, lastFinishedAt: { $lte: cleanDate } }, (err) => {
+        if (err) console.error('Failed to clean finished agenda jobs:', err);
+      });
+    }
   });
 
   return function () {
