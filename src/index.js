@@ -16,7 +16,7 @@ const defaultOptions = {
 };
 
 export default function (options) {
-  options = fp.assign({}, options, defaultOptions);
+  options = fp.assign(defaultOptions, options);
   const agenda = new Agenda(options);
   agenda.on('ready', agenda.start);
   agenda.on('complete', job => {
