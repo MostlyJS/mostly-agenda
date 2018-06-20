@@ -23,7 +23,7 @@ export default function (options) {
     // remove old finished jobs sometimes
     if (Math.random() <= options.cleanChance) {
       const cleanDate = new Date(Date.now() - humanInterval(options.cleanAfter));
-      agenda.cancel({ nextRunAt: null, lastFinishedAt: { $lte: cleanDate } }, (err) => {
+      agenda.cancel({ nextRunAt: null, lastFinishedAt: { $lte: cleanDate } }, err => {
         if (err) console.error('Failed to clean finished agenda jobs:', err);
       });
     }
