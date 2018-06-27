@@ -5,6 +5,10 @@ MostlyJS Agenda
 
 Lightweight job scheduling for MostlyJS microservices using [Agenda](http://agendajs.com).
 
+# Documentation
+
+Please see the [documentation site](https://mostlyjs.github.io).
+
 # Usage
 
 ## Installation
