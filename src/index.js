@@ -1,6 +1,6 @@
-import Agenda from 'agenda';
-import fp from 'mostly-func';
-import humanInterval from 'human-interval';
+const Agenda = require('agenda');
+const fp = require('mostly-func');
+const humanInterval = require('human-interval');
 
 const defaultOptions = {
   db: {
@@ -15,7 +15,7 @@ const defaultOptions = {
   cleanChance: 0.1
 };
 
-export default function (options) {
+module.exports = function (options) {
   options = fp.assignAll(defaultOptions, options);
   const agenda = new Agenda(options);
   agenda.on('ready', agenda.start);
@@ -33,4 +33,4 @@ export default function (options) {
     const app = this;
     app.agenda = agenda;
   };
-}
+};
